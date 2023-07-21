@@ -1,11 +1,7 @@
 ﻿using Firebase.Auth;
 using SecretMessage.WPF.Stores;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -24,7 +20,7 @@ namespace SecretMessage.WPF.Http
         {
             FirebaseAuthLink firebaseAuthLink = await _authenticationStore.GetFreshAuthAsync();
 
-            if(firebaseAuthLink != null)
+            if (firebaseAuthLink != null)
             {
                 request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", firebaseAuthLink.FirebaseToken);
             }

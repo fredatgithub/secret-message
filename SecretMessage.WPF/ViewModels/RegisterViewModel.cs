@@ -3,11 +3,6 @@ using MVVMEssentials.Commands;
 using MVVMEssentials.Services;
 using MVVMEssentials.ViewModels;
 using SecretMessage.WPF.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace SecretMessage.WPF.ViewModels
@@ -15,6 +10,7 @@ namespace SecretMessage.WPF.ViewModels
     public class RegisterViewModel : ViewModelBase
     {
         private string _email;
+
         public string Email
         {
             get
@@ -29,6 +25,7 @@ namespace SecretMessage.WPF.ViewModels
         }
 
         private string _username;
+
         public string Username
         {
             get
@@ -43,6 +40,7 @@ namespace SecretMessage.WPF.ViewModels
         }
 
         private string _password;
+
         public string Password
         {
             get
@@ -57,6 +55,7 @@ namespace SecretMessage.WPF.ViewModels
         }
 
         private string _confirmPassword;
+
         public string ConfirmPassword
         {
             get

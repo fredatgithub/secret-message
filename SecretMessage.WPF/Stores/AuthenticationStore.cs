@@ -1,8 +1,5 @@
 ﻿using Firebase.Auth;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -47,7 +44,7 @@ namespace SecretMessage.WPF.Stores
         public async Task Login(string email, string password)
         {
             _currentFirebaseAuthLink = await _firebaseAuthProvider.SignInWithEmailAndPasswordAsync(email, password);
-            
+
             SaveAuthenticationState();
         }
 
@@ -66,7 +63,7 @@ namespace SecretMessage.WPF.Stores
             }
 
             _currentFirebaseAuthLink = await _currentFirebaseAuthLink.GetFreshAuthAsync();
-            
+
             SaveAuthenticationState();
 
             return _currentFirebaseAuthLink;
